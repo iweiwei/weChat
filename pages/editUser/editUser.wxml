@@ -1,0 +1,8 @@
+<!--pages/editUser/editUser.wxml-->
+<view class="body">
+  <view class="text">编辑用户名，2-24个字符</view>
+  <view>
+    <input class="input" bindinput="inputedit" value="{{myUser}}"></input>
+  </view>
+  <button class="btn"bindtap="confirm">确认修改</button>
+</view>
