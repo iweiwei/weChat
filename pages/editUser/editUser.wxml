@@ -1,8 +1,23 @@
 <!--pages/editUser/editUser.wxml-->
 <view class="body">
-  <view class="text">编辑用户名，2-24个字符</view>
+
+  <!-- <view class="text">编辑用户名，2-24个字符</view>
   <view>
     <input class="input" bindinput="inputedit" value="{{myUser}}"></input>
-  </view>
-  <button class="btn"bindtap="confirm">确认修改</button>
+  </view> -->
+
+  <view class="text">编辑用户名，2-24个字符</view>
+    <view>
+
+      <van-cell-group>
+        <van-field value="{{ myUser }}" 
+        center clearable label="新用户名" 
+        placeholder="请输入" 
+        bind:change="inputedit"
+        use-button-slot
+        ></van-field>
+      </van-cell-group>
+    </view>
+  <button class="btn" bindtap="confirm">确认修改</button>
+    
 </view>

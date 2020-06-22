@@ -5,12 +5,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    myUser:''
-
+    myUser:'',
+    // currentName: 'currentName',
+    // newName: 'newName'
   },
   inputedit:function(e){
     // var dataset = e.currentTarget.dataset;
-    var value = e.detail.value;
+    var value = e.detail;
     // this.data[dataset.item] = value;
     this.setData({
       myUser: value
@@ -21,6 +22,23 @@ Page({
   },
   confirm:function(){
     var that = this
+    // get userInfoObj API
+    // wx.request({
+    //   // url: '',
+    // })
+    // var userInfoObj = {
+    //   currentName: 'lww',
+    //   newName: 'new lww'
+    // }
+    // that.setData({
+    //   currentName: userInfoObj.currentName,
+    //   newName: userInfoObj.newName
+    // })
+    //// 修改 userInfoObj, 将 newName 替换掉
+    // userInfoObj.newName = that.data.myUser
+    // console.log(userInfoObj)
+   //// 把 userInfoObj POST 到数据库 API
+
     wx.navigateTo({
       url: '/pages/infor/infor?user=' + that.data.myUser,
     })

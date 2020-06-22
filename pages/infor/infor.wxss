@@ -1,6 +1,6 @@
 /* pages/infor/infor.wxss */
 .header {
-	background: #a689c0;
+	background: #decafb;
 	padding: 40rpx;
 }
 .header .avatar {
@@ -10,7 +10,9 @@
 	height: 160rpx;
 	border-radius: 50%;
   overflow: hidden;
-	border: 2px solid #fee767;
+	/* border: 2px solid #fee767; */
+	border: 2px solid #cafadb;
+
 }
 .line {
 	margin-left: 30rpx;
@@ -20,9 +22,9 @@
 }
 .text-style{
   color: black;
+  position: absolute;
   margin-left: 50px;
- 
-}
+ }
 .section {
 	padding: 0;
 	color: #8a8a8a;

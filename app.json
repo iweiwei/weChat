@@ -2,15 +2,15 @@
   "pages":[
     "pages/infor/infor",
     "pages/editUser/editUser",
+    "pages/editPhone/editPhone",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#abcdef",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

@@ -1,0 +1,16 @@
+<view class="body">
+  <view class="text">编辑手机号，11个字符</view>
+    <view>
+
+      <van-cell-group>
+        <van-field value="{{ myPhone }}" 
+        center clearable label="手机号：" 
+        placeholder="请输入手机号" 
+        bind:change="inputedit"
+        use-button-slot
+        ></van-field>
+      </van-cell-group>
+    </view>
+  <button class="btn" bindtap="confirm">确认修改</button>
+    
+</view>

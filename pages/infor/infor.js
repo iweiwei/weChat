@@ -6,7 +6,7 @@ Page({
    */
   data: {
     dateValue:'1999-01-01',
-    phone:'',
+    phone:'13691897362',
     gender: 1,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     array: ['男', '女'],
@@ -38,15 +38,21 @@ Page({
                 url: '/pages/editUser/editUser?user=' + _this.data.myNickName,
               })
             }
-
           })
-          
         }
       }
     })
     console.log('myNickName is '+ _this.data.myNickName)
     
   },
+  editPhone:function(){
+    var _this = this
+    wx.navigateTo({
+      // get
+      url: '/pages/editPhone/editPhone?phone=' + _this.data.phone,
+    })
+  },
+
   datePickerBindchange: function (e) {
     this.setData({
       dateValue: e.detail.value
@@ -60,13 +66,24 @@ Page({
   onLoad: function (options) {
     console.log('infor options is ', options)   
     var that = this
-    if(options.user != null)
+    if(options != null)
     {
-      that.setData({
-        // get
-        infoNickName: options.user,
-        nickNameFlag: false
-      })
+      if(options.user)
+      {
+        that.setData({
+          // get
+          nickNameFlag: false,
+          infoNickName: options.user,
+        })
+      }
+      if(options.phone)
+      {
+        that.setData({
+          // get
+          phone: options.phone
+        })
+      }
+      
 
       // get
       // wx.request({
@@ -81,13 +98,13 @@ Page({
       //   success(res) {
       //     console.log('get request', res.data)
       //   }
-
       // })
       
     }
     else {
       console.log('options is null')
     }
+    
     
   },
 

@@ -3,35 +3,37 @@
   <!-- <image src="/image/touxiang.jpg" class="avatar"></image> -->
   <open-data type="userAvatarUrl" default-avatar="/image/touxiang.jpg" class="avatar"></open-data>
 </view>
+
 <view class="section">
-  <view class="line" bindtap="editName"  wx:if="{{nickNameFlag}}">昵称
+  <view class="line" bindtap="editName" wx:if="{{nickNameFlag}}">昵称:
     <!-- <text class="text-style">{{userName}}</text> -->
-    
+    <text decode>&emsp;</text>
     <open-data type="userNickName" class="text-style"></open-data>
   </view>
-  <view class="line" bindtap="editName"  wx:else>昵称
-    <text class="text-style">{{infoNickName}}</text>
-    
+  <view class="line" bindtap="editName" wx:else>昵称:
+    <text class="text-style"decode>&emsp;{{infoNickName}}</text>
     <!-- <open-data type="userNickName" class="text-style"></open-data> -->
   </view>
-  <view class="line">
 
+  <view class="line" bindtap="editPhone" value="{{phone}}">手机号:
+    <text class="text-style">{{phone}} 
+    </text>
+  </view>
+
+  <view class="line">
     <picker bindchange="bindPickerChange" value="{{gender}}" range="{{array}}">
       <view class="picker">
-        性别
-        <text class="text-style">{{array[gender]}}</text>
+        性别:
+        <text class="text-style" decode>&emsp;{{array[gender]}}</text>
       </view>
     </picker>
   </view>
 
   <view class="line" bindtap="editBirth">
-    <picker mode="date" value="{{dateValue}}" start="1970-01-01" end="2999-12-12" bindchange="datePickerBindchange">生日
-      <text class="text-style">{{dateValue}}</text>
+    <picker mode="date" value="{{dateValue}}" start="1970-01-01" end="2999-12-12" bindchange="datePickerBindchange">生日:
+      <text class="text-style"decode>&emsp;{{dateValue}}</text>
     </picker>
   </view>
 
-  <view class="line" bindtap="editPhone" value="{{phone}}">手机号
-    <text class="text-style">{{phone}} 
-    </text>
-  </view>
+
 </view>
